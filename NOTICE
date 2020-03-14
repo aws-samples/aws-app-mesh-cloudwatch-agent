@@ -1,0 +1,12 @@
+AWS App Mesh Cloud Watch Agent
+Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
+**********************
+THIRD PARTY COMPONENTS
+**********************
+This software includes third party software subject to the following copyrights:
+
+- Istio from https://github.com/istio/istio - Copyright 2016-2020 Istio Authors, licensed under Apache License 2.0.
+    - Dockerfile setup for user 1337 (https://github.com/istio/istio/blob/master/docker)
+
+The licenses for these third party components are included in LICENSE

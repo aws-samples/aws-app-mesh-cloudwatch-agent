@@ -11,5 +11,9 @@ push:
 ifeq ($(AWS_ACCOUNT),)
 	$(error AWS_ACCOUNT is not set)
 endif
+ifeq ($(AWS_REGION),)
+	$(error AWS_REGION is not set)
+endif
+	aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${AWS_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com
 	docker tag $(IMAGE):$(VERSION) $(REPO):$(VERSION)
 	docker push $(REPO):$(VERSION)
